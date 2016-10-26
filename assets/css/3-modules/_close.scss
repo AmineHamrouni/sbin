@@ -1,0 +1,25 @@
+.close {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  cursor: pointer;
+  &:after, &:before {
+    content: '';
+    width: 4px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: white;
+    position: absolute;
+  }
+  &:after {
+    transform: rotate(45deg);
+  }
+  &:before {
+    transform: rotate(-45deg);
+  }
+  &:hover {
+    opacity: .9;
+  }
+}

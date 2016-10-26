@@ -1,0 +1,1039 @@
+
+.pageform {
+    min-height: 600px;
+}
+
+.radiobtn {
+    margin-right: 5px;
+}
+
+    .radiobtn label {
+        padding: 4px 11px;
+    }
+
+.pageheader {
+    background: #326ea2;
+}
+
+.pageTitle {
+    color: #fff;
+}
+
+.overlay {
+    position: fixed;
+    background-color: #151515;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    filter: Alpha(Opacity=50);
+    -moz-opacity: 0.50;
+    opacity: 0.50;
+}
+
+.widgetProgress {
+    z-index: 1; /*1035;*/
+    background-color: #fff; /*rgba(0, 0, 0, 0.5);*/
+    box-shadow: 2px 2px 4px #999999;
+    padding: 0px;
+}
+
+    .widgetProgress img {
+        position: absolute;
+        top: 40%;
+        right: 45%;
+    }
+
+.loader {
+    z-index: 1100;
+    position: fixed;
+    top: 42%;
+    left: 45%;
+    background-color: #FFF;
+    border: 1px solid #DEDEDE;
+    border-radius: 38px;
+    box-shadow: 2px 2px 4px #999999;
+    padding: 10px;
+}
+
+    .loader > img {
+        float: left;
+    }
+
+    .loader > label {
+        color: #444444;
+        float: left;
+        font-size: 11px;
+        font-weight: bold;
+        padding-left: 12px;
+        padding-top: 10px;
+    }
+
+.actionpnl {
+    margin-bottom: 20px;
+}
+
+.actionbtn {
+    width: 1% !important;
+    padding-right: 6px !important;
+    padding-left: 6px !important;
+}
+
+.required {
+    color: Red;
+}
+
+/* Image Designing Propoerties */
+.thumb {
+    height: 75px;
+    border: 1px solid #000;
+    margin: 10px 5px 0 0;
+}
+
+.contractor-img-container {
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contractor-img-container #imgUser {
+}
+
+#imgCurrentUser {
+    height: 92px;
+}
+
+#fileSelect {
+    opacity: 0;
+}
+
+@media screen and (min-width: 600px) {
+    .ulpager {
+        display: flex;
+        justify-content: center;
+        margin-top: -30px;
+        position: relative;
+        z-index: 5;
+    }
+}
+
+.center {
+    display: block;
+    margin: 0 auto;
+}
+
+.group-control {
+    float: right;
+    margin-right: 10px;
+}
+
+    .group-control .first {
+        float: right;
+    }
+
+.notshown {
+    display: none;
+}
+
+.mailHeading {
+    background: none !important;
+}
+
+.label-visit {
+    background-color: #337ab7;
+}
+
+.label-report {
+    background-color: #fe5621;
+}
+
+.label-audit {
+    background-color: #3bb1b1;
+}
+
+.label-adoptionrq {
+    background-color: #ca7c7c;
+}
+
+.label-remark {
+    background-color: #0026ff;
+}
+
+.btn-send {
+    background-image: linear-gradient(to bottom, #3bb1b1 0%, #3bb1b1 100%);
+    background-repeat: repeat-x;
+    border-color: #b92c28;
+}
+
+.btn-send {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-send {
+    background-color: #3bb1b1;
+    border-color: #3bb1b1;
+    color: #ffffff;
+} 
+
+.rbList {
+    /* float: right; */
+}
+
+.rbList div {
+    padding: 0;
+}
+
+.rbListCol {
+    padding-right: 0;
+}
+
+.rbList label {
+    margin-right: 5px !important;
+    margin-left: 5px !important;
+}
+
+#eventsInfo {
+    margin: 5px;
+}
+
+#btnNewMail {
+    float: right;
+    margin: 10px 20px;
+}
+
+#cbAssignedTasks, #cbCreatedTasks {
+    float: right;
+    width: 10px;
+}
+
+#filterTasks label {
+    width: 170px;
+    float: right;
+}
+
+#tasksPager {
+    margin-bottom: 35px;
+}
+
+.fileinput {
+    background-color: #f4f4f4 !important;
+    border: 1px solid transparent !important;
+    border-radius: 3px !important;
+    box-shadow: none !important;
+    color: #444 !important;
+    cursor: pointer;
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+/*Input Clear*/
+.clearer {
+    color: #ccc;
+}
+
+.mailbox-attachments {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+    .mailbox-attachments li {
+        float: left;
+        width: 100px;
+        border: 1px solid #eee;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+.mailbox-attachment-name {
+    font-weight: bold;
+    color: #666;
+}
+
+.mailbox-attachment-icon,
+.mailbox-attachment-info,
+.mailbox-attachment-size {
+    display: block;
+}
+
+.mailbox-attachment-info {
+    padding: 10px;
+    background: #f4f4f4;
+    direction: ltr;
+    text-align: left;
+}
+
+.mailbox-attachment-size {
+    color: #999;
+    font-size: 12px;
+}
+
+.mailbox-attachment-icon {
+    text-align: center;
+    font-size: 50px;
+    color: #666;
+    padding: 0px 0px;
+}
+
+    .mailbox-attachment-icon.has-img {
+        padding: 0;
+    }
+
+        .mailbox-attachment-icon.has-img > img {
+            max-width: 100%;
+            height: auto;
+        }
+
+.fa-info:hover {
+    cursor: help;
+}
+
+
+#cbDays tbody tr td label {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.download:hover {
+    cursor: pointer;
+}
+
+/******************************************************** project tasks ***********************************************************************/
+
+#tableResources thead {
+    background-color: #337ab7 !important;
+    color: white !important;
+}
+
+#tableResources .right {
+    text-align: right !important;
+}
+
+#tableResources .center {
+    text-align: center !important;
+}
+
+#tableResources .expand:hover {
+    cursor: pointer;
+}
+
+.tableTasks {
+    padding-bottom: 70px !important;
+    padding-left: 0px !important;
+}
+
+.tableTasks {
+    padding-bottom: 70px !important;
+    padding-left: 0px !important;
+}
+
+.tableTasksRes {
+    padding-bottom: 90px !important;
+    padding-left: 0 !important;
+}
+
+.resultContainer {
+    margin-top: 15px;
+    text-align: center;
+}
+
+    .resultContainer table th {
+        font-size: 12px;
+    }
+
+#tableQuantities table tbody tr td {
+    padding-right: 6px;
+}
+
+
+.label-payements {
+    background-color: #337ab7;
+}
+
+.label-events {
+    background-color: #fe5621;
+}
+
+.label-files {
+    background-color: #3bb1b1;
+}
+
+.label-quantities {
+    background-color: #ca7c7c;
+}
+
+
+.percent .val {
+    color: #c0c0c0;
+    text-align: center;
+}
+
+.overflowDropDown {
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+#divTask .panel-heading:hover {
+    cursor: pointer;
+}
+
+.divCorner {
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.topMargin {
+    margin-top: 25px;
+}
+
+.noMarginAndPadding {
+    margin: 0;
+    padding: 0;
+}
+
+.cbLabel label {
+    margin-right: 5px;
+}
+
+.cbLabel input {
+    margin-right: 3px;
+}
+
+.floatRight {
+    float: right;
+}
+
+.customBtn a {
+    border: 1px solid #dbdbdb;
+    margin: 2px;
+    color: #326ea2;
+    font-size: 12px;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 5px;
+    -moz-box-shadow: 6px 5px 6px -7px #000;
+    -webkit-box-shadow: 6px 5px 6px -7px #000;
+    box-shadow: 5px #000;
+    box-shadow: 6px 5px 6px -7px #000;
+}
+
+.alignLeft {
+    text-align: left;
+}
+
+.customBtn a:hover {
+    color: #fff;
+    background: #44b0cb;
+}
+
+.addTask {
+    left: 20px;
+    position: fixed;
+    top: 42px;
+    z-index: 95;
+    -moz-transform: scale(.9);
+    -ms-transform: scale(.9);
+    -o-transform: scale(.9);
+    -webkit-transform: scale(.9);
+    transform: scale(.9);
+    -moz-transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+    -o-transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+    -webkit-transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+    transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+}
+
+    .addTask:hover {
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+.divInfo {
+    padding: 5px;
+    margin-top: 7px;
+}
+
+.glyphicon span {
+    font-family: "JF Flat Medium";
+}
+
+.equivDate {
+    color: #FE9A2E !important;
+}
+
+.projHeader:hover {
+    color: #CED8F6;
+}
+
+.autowidth {
+    width: 80% !important;
+}
+
+.imgProjStatus {
+    height: 32px;
+    width: 32px;
+    -moz-transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+    -o-transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+    -webkit-transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+    transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+    /*box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);*/
+    top: 5px;
+    /*border-radius: 50%;*/
+    position: absolute;
+    right: 10px;
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    cursor: help;
+}
+
+    .imgProjStatus:hover {
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        -moz-transform-origin: center;
+        -ms-transform-origin: center;
+        -o-transform-origin: center;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+    }
+
+    .imgProjStatus img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+.projName {
+    float:left ;
+}
+
+.projTitle {
+    height: 30px;
+}
+
+.percentageInProj label {
+    float: right;
+}
+
+.percentageInProj input {
+    float: right;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.percentageInProj .perc {
+    float: right;
+    margin-right: 5px;
+}
+
+.percentageInProj button {
+    float: right;
+    margin-right: 10px;
+}
+
+#tableWorks .operational td {
+    background-color: #fcdfff !important;
+}
+
+.lblWorkTask {
+    float: right;
+    width: 102px;
+    padding-right: 15px;
+}
+
+.projectGroup {
+    background: #70C1B3 none repeat scroll 0 0;
+    border-radius: 0;
+}
+
+    .projectGroup a {
+        color: #fff !important;
+        font-size: 14px;
+        font-weight: normal;
+        -moz-transition: all .3s ease -o-transition: all .3s ease -webkit-transition: all .3s ease transition: all .3s ease;
+    }
+
+        .projectGroup a:hover {
+            cursor: pointer;
+            color: #f4f4f4 !important;
+        }
+
+    .projectGroup:hover {
+        background: #44b0cb;
+    }
+
+.editTask {
+    margin-top: 3px;
+    font-size: 18px !important;
+    color: rgb(76, 95, 127);
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+    .editTask:hover {
+        cursor: pointer;
+        opacity: .8;
+    }
+
+.pdRight5 {
+    padding-right: 5px;
+}
+
+.planing .val {
+    color: #c0c0c0;
+    margin-top: -5px;
+    text-align: center;
+}
+
+.planing .progress {
+    margin-top: 0px;
+}
+
+.tableProjFiles .treegrid-expander {
+    width: unset !important;
+}
+
+.tableProjFiles td > .jtable-delete-command-button {
+    background: rgba(0, 0, 0, 0) url("../../scripts/jtableV1/themes/metro/delete.png") no-repeat scroll 0 0;
+    opacity: 0.4;
+    width: 22px;
+}
+
+.tableProjFiles td > .jtable-download-command-button {
+    background: rgba(0, 0, 0, 0) url("../../scripts/jtableV1/themes/metro//download.png") no-repeat scroll 0 0;
+    opacity: 0.4;
+    width: 22px;
+}
+
+.projectsList label {
+    margin-right: 4px;
+}
+
+.hijriDate {
+    /*margin-top: 5px;*/
+}
+
+.rblList tbody tr td label {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.cbGroup label {
+    margin-right: 5px;
+}
+
+.contextuelButton {
+    width: auto;
+}
+
+.contextuelBaseBtn {
+    float: right;
+    padding-left: 0px !important;
+}
+
+    .contextuelBaseBtn a {
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+
+.contextuelToogleBtn {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.contextuelDropDown {
+    float: right;
+}
+
+#btnExportImage {
+    cursor: pointer;
+    margin: 5px;
+}
+
+#btnExportPDF {
+    cursor: pointer;
+    margin: 5px;
+}
+
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.eventsTitle {
+    /*padding-bottom: 5px;
+    padding-top: 6px;*/
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .eventsTitle #imgFullCalendar {
+        cursor: pointer;
+        height: 24px;
+        width: 24px;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -moz-transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+        -o-transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+        -webkit-transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+        transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+        .eventsTitle #imgFullCalendar:hover {
+            -moz-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+            -moz-transform-origin: center;
+            -ms-transform-origin: center;
+            -o-transform-origin: center;
+            -webkit-transform-origin: center;
+            transform-origin: center;
+        }
+
+        .eventsTitle #imgFullCalendar svg {
+            fill: white;
+            z-index: 3;
+        }
+
+        .eventsTitle #imgFullCalendar .circle-bg {
+            background: #F7134E;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+    .eventsTitle #imgAllEvents {
+        cursor: pointer;
+        height: 24px;
+        width: 24px;
+        position: absolute;
+        right: 65px;
+        top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -moz-transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+        -o-transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+        -webkit-transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+        transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+        .eventsTitle #imgAllEvents:hover {
+            -moz-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+            -moz-transform-origin: center;
+            -ms-transform-origin: center;
+            -o-transform-origin: center;
+            -webkit-transform-origin: center;
+            transform-origin: center;
+        }
+
+        .eventsTitle #imgAllEvents svg {
+            fill: white;
+            z-index: 3;
+        }
+
+        .eventsTitle #imgAllEvents .circle-bg {
+            background: rgb(71, 140, 199);
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+.evtTitle h3 {
+    width: 200px;
+}
+
+#eventsListLoading, #eventsCalLoading {
+    position: relative;
+    width: 200px;
+    margin-top: 0;
+}
+
+.weekend {
+    background: #BD7990 !important;
+    color: white !important;
+}
+
+.cbContainer label {
+    margin-right: 5px !important;
+}
+
+.fc-state-active {
+    z-index: 1 !important;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.switcher .rightLabel {
+    margin-left: 5px;
+}
+
+.veticalCenter {
+    padding-top: 6px !important;
+}
+
+#rowCompleteWorkTask .btn {
+    float: left;
+    margin-left: 36px;
+}
+
+#rowCompleteResTask .btn {
+    float: left;
+    margin-left: 36px;
+}
+
+.divIsPrivate .sign-info {
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+#divEnableFormTop {
+    float: left;
+    margin-left: 53px;
+}
+
+#divEditTop {
+    float: left;
+    margin-left: 53px;
+}
+
+#hSubject {
+    font-size: 15px;
+}
+
+.imgMail {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    position: relative;
+    right: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -moz-transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+    -o-transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+    -webkit-transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+    transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+    .imgMail:hover {
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        -moz-transform-origin: center;
+        -ms-transform-origin: center;
+        -o-transform-origin: center;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+    }
+
+    .imgMail svg {
+        fill: white;
+        z-index: 3;
+    }
+
+    .imgMail .circle-bg {
+        background: rgb(71, 140, 199);
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+.error {
+    color: #a94442;
+}
+
+
+.imgRound {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    position: relative;
+    right: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -moz-transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+    -o-transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+    -webkit-transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+    transition: all .3s cubic-bezier(0.96, -1.44, 1, 1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+    .imgRound:hover {
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        -moz-transform-origin: center;
+        -ms-transform-origin: center;
+        -o-transform-origin: center;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+    }
+
+    .imgRound svg {
+        fill: white;
+        z-index: 3;
+    }
+
+    .imgRound .circle-bg {
+        background: rgb(71, 140, 199);
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+.arrowUp {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.arrowDown {
+    margin-left: -10px;
+    margin-top: -12px;
+    cursor: pointer;
+}
+
+.refreshBtn {
+    cursor: pointer;
+    /* float: left; */
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+    background-color: #1CB162;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+    .refreshBtn i {
+        -moz-transition: all .4s cubic-bezier(0.25, 0.1, 0.58, 3.07);
+        -o-transition: all .4s cubic-bezier(0.25, 0.1, 0.58, 3.07);
+        -webkit-transition: all .4s cubic-bezier(0.25, 0.1, 0.58, 3.07);
+        transition: all .4s cubic-bezier(0.25, 0.1, 0.58, 3.07);
+        margin-left: 0 !important;
+    }
+
+    .refreshBtn:hover {
+        background-color: #169351;
+    }
+
+        .refreshBtn:hover i {
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+
+#stepWorkDialog .divWarning {
+    margin: 12px;
+}
+
+#fgScndUserName div {
+    padding-left: 0;
+}
+
+#txtScndUserNamePrefix {
+    padding-right: 0;
+    text-align: right;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+footer .copyRight {
+    color: #C5C5C5;
+    font-size: 11px;
+    direction: ltr;
+}
+
+

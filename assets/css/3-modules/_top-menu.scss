@@ -1,0 +1,124 @@
+$top-menu-bg: rgba(51,157,214,.8);
+$login-bg: $top-menu-bg;
+
+@mixin bars($colors: white) {
+  display: inline-block;
+  content: '';
+  width: 20px;
+  height: 3px;
+  background-color: $colors;
+  border-radius: 5px;
+}
+
+.top-menu {
+  height: 107px;
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  background-color: transparent;
+//  background-color: $top-menu-bg;
+  transition: 1s ease;
+  
+  @include outer-container(100%);
+  .wrapper {
+    //background-color: pink;
+    
+    @include outer-container();
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    > div {
+      
+      //background-color: pink;
+    }
+  }
+  .top-menu__right {
+//    @include span-columns(1 of 3);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+  }
+  .top-menu__center {
+//    @include span-columns(1 of 3);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 2;
+    padding-right: 42px;
+  }
+  .top-menu__left {
+//    @include span-columns(1 of 3);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+  }
+  
+}
+
+.top-menu__logo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+}
+
+.top-menu__main {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+  .icon {
+    margin: 5px;
+    @include bars;
+    position: relative;
+    &:after, &:before {
+      @include bars;
+      position: absolute;
+      right: 0;
+      transition: .2s cubic-bezier(0.42, 0, 1, 2.59);;
+    }
+    &:after {
+      top: 5px;
+    }
+    &:before {
+      top: -5px;
+    }
+  }
+  &:hover {
+    .icon {
+      &:after {
+        top: 7px;
+      }
+      &:before {
+        top: -7px;
+      }
+    }
+  }
+}
+
+.top-menu__login {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 20px;
+  width: 85px;
+  height: 30px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all .2s ease-in;
+  &:hover {
+    //box-shadow: 0 0 5px 5px rgba(0,0,0,.2);
+    width: 95px;
+    background-color: $login-bg;
+    color: white;
+  }
+}

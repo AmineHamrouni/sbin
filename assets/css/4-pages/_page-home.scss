@@ -1,0 +1,262 @@
+@mixin section__title {
+  font-size: 22px;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+  padding-top: 167px;
+  padding-bottom: 10px;
+  position: relative;
+  &:after,
+  &:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  &:after {
+    width: 474px;
+    height: 1px;
+    background-color: #ccc;
+    bottom: 0;
+  }
+  &:before {
+    width: 154px;
+    height: 4px;
+    background-color: #0084cc;
+    bottom: -4px;
+  }
+}
+
+.page-home {
+  .section {
+    height: 100vh;
+    min-height: 600px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include outer-container(100%);
+    overflow-y: auto;
+    .wrapper {
+      @include outer-container;
+    }
+    .section__title {
+      @include section__title;
+    }
+  }
+  .section-hero {
+    //background-color: pink;
+    background-image: url(../img/Saudi_Arabia__city__Riyadh__night__lights.png);
+    .wrapper {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .section-hero__item {
+      position: relative;
+      @include outer-container(725px);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      padding-right: 24px;
+      
+      &:after {
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 1px;
+        background-color: white;
+        top: 0;
+        right: 0;
+        transition: .3s ease;
+      }
+      &:hover {
+        &:after {
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 10px;
+          background-color: white;
+          top: 0;
+          right: 0;
+        }
+      }
+      h4 {
+        color: white;
+        font-size: 30px;
+        font-weight: normal;
+        width: 100%;
+      }
+      p {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 2;
+      }
+    }
+  }
+  
+  .section-about {
+    .section__title {
+      color: #333;
+    }
+    .section__content {
+      margin-top: 80px;
+    }
+    .section-about__description {
+      @include span-columns(10 of 16);
+      h3 {
+        color: #009fef;
+        font-size: 20px;
+        font-weight: normal;
+        margin-bottom: 50px;
+      }
+      p {
+        color: #333333;
+        font-size: 14px;
+        line-height: 2;
+        text-align: justify;
+      }
+    }
+    .section-about__figure {
+      @include span-columns(6 of 16);
+    }
+  }
+  
+  .section-event {
+    background-image: url(../img/event.png);
+    .section__title {
+    }
+    .section__content {
+      display: flex;
+      justify-content: space-around;
+    }
+    .section__content__item {
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      width: 300px;
+      background-color: rgba(240, 248, 255, 0.1);
+      transition: .3s ease-in;
+      &:hover {
+        background-color: rgba(240, 248, 255, 0.3);
+        h5 {
+          background-color: #3f9ddb;
+        }
+        figure {
+          img {
+            transform: scale(1.05);
+            transform-origin: top;
+          }
+        }
+      }
+      figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        //background-color: rgba(240, 248, 255, 0.3);
+        background-color: #000;
+        background-image: url('../../img/logo.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 146px;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+        img {
+          transition: .2s ease-in;
+        }
+      }
+      h5 {
+        font-size: 16px;
+        font-weight: normal;
+        color: white;
+        background-color: rgb(219, 59, 86);
+        padding: 5px 10px;
+        position: relative;
+        z-index: 2;
+        transition: .3s ease;
+        &:after {
+          content: '';
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 1;
+        }
+      }
+      p {
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 2;
+        text-align: justify;
+        padding: 0 10px;
+      }
+    }
+  }
+    
+  .section-library {
+    background-image: url(../img/bg_type.png);
+    .section__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row-reverse;
+      margin-top: 80px;
+    }
+    .section-library__description {
+      @include span-columns(8 of 16);
+      color: white;
+      h3 {
+        color: white;
+        font-size: 30px;
+        font-weight: normal;
+        margin-bottom: 70px;
+        position: relative;
+        &:after {
+          position: absolute;
+          bottom: -10px;
+          right: 0;
+          content: '';
+          width: 50px;
+          height: 4px;
+          border-radius: 10px;
+          background-color: #25d563;
+          transition: .2s ease;
+        }
+        &:hover {
+          &:after {
+            width: 70px;
+          }
+        }
+      }
+      p {
+        font-size: 18px;
+        margin-bottom: 45px;
+      }
+    }
+    .section-library__gallery {
+      @include span-columns(8 of 16);
+    }
+  }
+    
+  .section-sponsor {
+    background-image: url(../img/riyadh-2.png);
+    .section-library__description {
+      @include span-columns(8 of 16);
+    }
+    .section-library__gallery {
+      @include span-columns(8 of 16);
+    }
+  }
+  
+  #owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+}

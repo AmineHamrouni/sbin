@@ -1,0 +1,151 @@
+$send-bg-color: #11943f;
+$login-bg-color: rgba(37,213,99,.95);
+
+
+.main-menu {
+  display: none;
+  @include outer-container(100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 600px;
+  background: rgba(37,213,99,.95);
+  z-index: 9999;
+  transition: .2s ease-in-out;
+  .wrapper {
+    @include outer-container(1240px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.login-pop {
+  display: none;
+  @include outer-container(100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 600px;
+  background: rgba(37,213,99,.95);
+  z-index: 9999;
+  transition: .2s ease-in-out;
+  .wrapper {
+    @include outer-container(1240px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+}
+
+.is-opened {
+  display: block ;
+}
+
+.login-pop__title {
+  font-size: 32px;
+  color: white;
+  margin-bottom: 60px;
+}
+
+.login-pop__description{
+  position: relative;
+  @include span-columns(6 of 12);
+  text-align: right;
+  p {
+    color: white;
+    font-size: 18px;
+  }
+  .small {
+    font-size: 14px;
+  }
+  &:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: rgba(255,255,255,.6);
+  }
+}
+
+.login-pop__title__link {
+  display: block;
+  margin: 10px auto;
+  color: white;
+  text-align: center;
+  width: 382px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50px;
+  background-color: #2385ca;
+  font-size: 18px;
+}
+
+.login-pop__form{
+  @include span-columns(6 of 12);
+  text-align: center;
+  form {
+    @include outer-container(382px);
+    label {
+      text-align: right;
+      color: white;
+      font-size: 14px;
+      padding-bottom: 15px;
+    }
+  }
+}
+
+.login-pop__user {
+  margin-bottom: 30px !important;
+}
+
+.login-pop__forgot {
+  color: white;
+  font-size: 12px;
+  &:after {
+    content: '';
+    width: 80%;
+    height: 2px;
+    background-color: antiquewhite;
+  }
+  &:hover {
+    color: aliceblue;
+  }
+}
+
+.login-pop__send {
+  display: block;
+  width: 100%;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  margin-top: 20px;
+  background-color: $send-bg-color;
+  &:hover {
+    background-color: darken($send-bg-color,10%);
+  }
+}
+
+.separator {
+  margin: 70px auto 25px;
+  width: 80%;
+  max-width: 510px;
+  height: 1px;
+  background-color: rgba(255,255,255,.3);
+}
+
+.text-center {
+  text-align: center;
+}
+
+
