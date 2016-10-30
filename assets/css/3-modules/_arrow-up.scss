@@ -1,0 +1,44 @@
+.arrow-up {
+  position: fixed;
+  bottom: 0%;
+  right: 0;
+  left: 0;
+  background-color: rgba(38, 214, 160, 0.6);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  color: white;
+  transition: .2s ease;
+  svg {
+    height: 15px;
+  }
+  polygon {
+    fill: #fff;
+  }
+  &:hover {
+    background-color: rgba(38, 214, 160, 0.8);
+    svg {
+      @include animation(move-up 1s ease-in-out infinite);
+    }
+  }
+}
+
+@include keyframes(move-up) {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+  
+}

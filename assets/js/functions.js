@@ -1,11 +1,11 @@
 $(document).ready(function () {
   // Close button
   $(".login-pop__close").click(function () {
-    $('.login-pop').hide();
+    $('.login-pop').fadeOut(300);
   });
   // open button
   $(".top-menu__login").click(function () {
-    $('.login-pop').show();
+    $('.login-pop').fadeIn(300);
   });
   //On scroll change header background
   $(window).scroll(function () {
@@ -23,5 +23,19 @@ $(document).ready(function () {
     autoplayDirection: 'backwards',
     rightToLeft: true
   });
+  
+  function scrollToAnchor(aid){
+      var aTag = $("[name='"+ aid +"']");
+      $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+  }
+
+  $('#link').click(function() {
+     scrollToAnchor('1');
+  });
+
+  $('#arrow-up').click(function() {
+     scrollToAnchor('top');
+  });
+
 
 });

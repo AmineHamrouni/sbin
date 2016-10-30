@@ -1,0 +1,111 @@
+.footer {
+  $base-spacing: 1.5em !default;
+  $action-color: #477DCA !default;
+  $medium-screen: 40em !default;
+  $large-screen: 53.75em !default;
+  $footer-background: desaturate(darken($action-color, 20%), 30%);
+  $footer-color: #ccc;
+  $footer-link-color: transparentize($footer-color, 0.6);
+  $footer-disclaimer-color: transparentize($footer-color, 0.6);
+
+  background: $footer-background;
+  
+  padding: ($base-spacing * 2) $gutter;
+  width: 100%;
+  
+  .footer__title {
+     
+  }
+
+  .footer-logo {
+    margin-bottom: 2em;
+    text-align: center;
+    
+    img {
+      //height: 3em;
+    }
+  }
+
+  .footer__content {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: $base-spacing;
+  }
+  @include direction-context(right-to-left) {
+    ul {
+      //flex-basis: 13em;
+      //flex-shrink: 0;
+      @include span-columns(4);
+      margin-bottom: $base-spacing * 2;
+      padding: 0;
+    }
+  }
+
+  li {
+    line-height: 1.5em;
+    list-style: none;
+    text-align: right;
+    
+  }
+
+  li a {
+    color: $footer-link-color;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+  li h3 {
+    color: $footer-color;
+    font-size: 18px;
+    margin-bottom: 40px;
+    font-weight: normal;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      right: 0;
+      height: 1px;
+      width: 100%;
+      background-color: transparentize(#fff,.7); 
+    }
+  }
+  
+  .footer__keywords {
+    span {
+      display: inline-block;
+      font-size: 14px;
+      color: #ccc;
+      padding: 5px 15px;
+      margin-bottom: 5px;
+      background-color: transparentize(#fff,.9);
+      cursor: help;
+      transition: .2s ease;
+      &:hover {
+        background-color: #38bbff;
+        color: #fff;
+      }
+    }
+  }
+
+  hr {
+    border: 1px solid transparentize($footer-disclaimer-color, 0.3);
+    margin: 0 auto $base-spacing;
+    width: 12em;
+  }
+
+  p {
+    color: $footer-disclaimer-color;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    margin: auto;
+    max-width: 35em;
+    text-align: center;
+  }
+}

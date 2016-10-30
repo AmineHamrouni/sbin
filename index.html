@@ -90,20 +90,26 @@
   </section>
 
 
-
+  <div id="arrow-up" class="arrow-up">
+    <span>الى الاعلى</span>
+    <svg enable-background="new 0 0 26 26" height="26px" id="Layer_1" version="1.1" viewBox="0 0 26 26" width="26px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g>
+        <polygon fill="#231F20" points="0.046,24.418 2.13,26.502 12.967,15.666 23.803,26.502 25.887,24.418 12.967,11.498  " />
+        <polygon fill="#231F20" points="0.046,13.418 2.13,15.502 12.967,4.666 23.803,15.502 25.887,13.418 12.967,0.498  " />
+      </g>
+    </svg>
+  </div>
 
 
 
   <!--All sections-->
-  <div class="page-home">
+  <div class="page-home" name="top">
 
     <!--  Hero section-->
     <section class="section section-hero">
-<!--
-      <video width="300px" height="300px">
-        <source src="assets/img/video.mp4" type="video/mp4"></source>
+      <video class="section-hero__video" loop="" width="100%" autoplay muted>
+        <source type="video/mp4" src="assets/img/video.mp4">
       </video>
--->
       <div class="wrapper">
 
         <div class="slider-pro section-hero__slider" id="section-hero__slider">
@@ -134,10 +140,18 @@
           </div>
         </div>
       </div>
+      <span id="link" class="scroll-btn">
+				<a href="#">
+					<span class="mouse">
+						<span>
+						</span>
+      </span>
+      </a>
+      </span>
     </section>
 
     <!--  about section-->
-    <section class="section section-about">
+    <section name="1" class="section section-about">
       <div class="wrapper">
         <h3 class="section__title">عن الشبكة</h3>
         <div class="section__content">
@@ -181,8 +195,14 @@
             <h5>معاً لتطوير صناعة حاضنات الأعمال في المملكة لمواكبة المستويات العالمية</h5>
             <p>هذه جزء من سلسلة تقارير بادر تصدر باللغتين العربية ولانجليزية، وهي أحد أعمال برنامج بادر لحاضنات التقنية. وتهدف هذه التقارير إلى تقديم المعلومات هذه جزء من سلسلة تقارير بادر تصدر باللغتين العربية والانجليزية، وهي أحد أعمال برنامج بادر لحاضنات التقنية.</p>
           </a>
-
         </div>
+        <!--
+        <div class="section-event__all-events">
+          <a href="">
+            <span>كل الفعاليات</span>
+          </a>
+        </div>
+-->
       </div>
     </section>
 
@@ -216,7 +236,7 @@
         <div class="section__content">
           <div class="show-case">
             <div class="show-case__header">
-              <div class="show-case__option show-case__option--active"  id="all">كل الجهات</div>
+              <div class="show-case__option show-case__option--active" id="all">كل الجهات</div>
               <div class="show-case__option" id="a">الجهات الداعمة</div>
               <div class="show-case__option" id="b">الأعضاء</div>
             </div>
@@ -233,8 +253,49 @@
     </section>
 
     <!--  Footer section-->
-    <footer>
-      <!--To do later-->
+    <footer class="footer" role="contentinfo">
+      <div class="wrapper">
+
+
+        <div class="footer__title">
+          وسائل الاتصال
+        </div>
+        <div class="footer__content">
+          <ul>
+            <li>
+              <h3>للتواصل</h3></li>
+            <li><a href="javascript:void(0)">About</a></li>
+            <li><a href="javascript:void(0)">Contact</a></li>
+            <li><a href="javascript:void(0)">Products</a></li>
+          </ul>
+          <ul>
+            <li>
+              <h3>التواصل الاجتماعي</h3></li>
+            <li><a href="javascript:void(0)">Facebook</a></li>
+            <li><a href="javascript:void(0)">Twitter</a></li>
+            <li><a href="javascript:void(0)">YouTube</a></li>
+          </ul>
+          <ul>
+            <li>
+              <h3>الكلمات المفاتيح</h3></li>
+            <li class="footer__keywords">
+              <span>التسجيل في الشبكة</span>
+              <span>حاضنات</span>
+              <span>الفعاليات</span>
+              <span>الموارد</span>
+              <span>تطوير</span>
+              <span>تسجيل مقاول</span>
+              <span>ريادة الاعمال</span>
+              <span>صناعة الحاضنات</span>
+              <span>الشراكات</span>
+            </li>
+          </ul>
+        </div>
+
+        <hr>
+
+        <p>الشبكة السعودية لحاضنات الأعمال&copy; ٢٠١٦</p>
+      </div>
     </footer>
 
   </div>
@@ -256,11 +317,11 @@
 
   <script type="text/javascript">
     $(document).ready(function () {
-      var $btns = $('.show-case__option').click(function() {
+      var $btns = $('.show-case__option').click(function () {
         if (this.id === 'all') {
-          $('.show-case__content > div').fadeIn(450);
+          $('.show-case__content > div').fadeIn();
         } else {
-          var $el = $('.' + this.id).fadeIn(450);
+          var $el = $('.' + this.id).fadeIn();
           $('.show-case__content > div').not($el).hide();
         }
         $btns.removeClass('show-case__option--active');

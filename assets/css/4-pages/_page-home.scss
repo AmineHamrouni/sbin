@@ -29,7 +29,7 @@
 }
 
 .page-home {
-  .section {
+  .section, .footer {
     height: 100vh;
     min-height: 600px;
     background-attachment: fixed;
@@ -40,13 +40,16 @@
     .wrapper {
       @include outer-container;
     }
-    .section__title {
+    .section__title, .footer__title {
       @include section__title;
     }
   }
   .section-hero {
     //background-color: pink;
     background-image: url(../img/Saudi_Arabia__city__Riyadh__night__lights.png);
+    position: relative;
+    overflow: hidden;
+    z-index: 11; //because of the arrow-up
     .wrapper {
       height: 100%;
       display: flex;
@@ -61,7 +64,6 @@
       flex-direction: column;
       color: white;
       padding-right: 24px;
-      
       &:after {
         position: absolute;
         display: block;
@@ -95,8 +97,11 @@
         line-height: 2;
       }
     }
+    .section-hero__video {
+      position: absolute;
+      width: 100%;
+    }
   }
-  
   .section-about {
     .section__title {
       color: #333;
@@ -123,14 +128,13 @@
       @include span-columns(6 of 16);
     }
   }
-  
   .section-event {
     background-image: url(../img/event.png);
-    .section__title {
-    }
+    .section__title {}
     .section__content {
       display: flex;
       justify-content: space-around;
+      margin-top: 70px;
     }
     .section__content__item {
       color: white;
@@ -142,12 +146,14 @@
       transition: .3s ease-in;
       &:hover {
         background-color: rgba(240, 248, 255, 0.3);
+        
         h5 {
-          background-color: #3f9ddb;
+          //background-color: #3f9ddb;
+          background-color: rgba(219, 59, 86, 1);;
         }
         figure {
           img {
-            transform: scale(1.05);
+            //transform: scale(1.05);
             transform-origin: top;
           }
         }
@@ -173,7 +179,7 @@
         font-size: 16px;
         font-weight: normal;
         color: white;
-        background-color: rgb(219, 59, 86);
+        background-color: rgba(219, 59, 86, .8);
         padding: 5px 10px;
         position: relative;
         z-index: 2;
@@ -196,8 +202,32 @@
         padding: 0 10px;
       }
     }
+    .section-event__all-events {
+      @include outer-container(1125px);
+      background-color: rgba(240, 248, 255, 0.1);
+      margin-top: 20px;
+      height: 30px;
+      text-align: center;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      a {
+        color: white;
+        font-weight: normal;
+        font-size: 12px;
+        padding: 5px 55px;
+        background-color: rgba(240, 248, 255, 0.1);
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        transition: .2s ease;
+        &:hover {
+          background-color: rgba(240, 248, 255, 0.3);
+          padding: 5px 75px;
+        }
+      }
+    }
   }
-    
   .section-library {
     background-image: url(../img/bg_type.png);
     .section__content {
@@ -242,7 +272,6 @@
       @include span-columns(8 of 16);
     }
   }
-    
   .section-sponsor {
     background-image: url(../img/riyadh-2.png);
     .section-library__description {
@@ -252,11 +281,63 @@
       @include span-columns(8 of 16);
     }
   }
-  
-  #owl-demo .item img{
+  #owl-demo .item img {
     display: block;
     width: 100%;
     height: auto;
   }
-  
+}
+
+.scroll-btn {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  text-align: center;
+  > * {
+    display: inline-block;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+  .mouse {
+    position: relative;
+    display: block;
+    width: 27px;
+    height: 43px;
+    margin: 0 auto 20px;
+    background: transparent url(../img/mouse.png) 0 0 no-repeat;
+    > * {
+      position: absolute;
+      display: block;
+      top: 25px;
+      left: 50%;
+      width: 9px;
+      height: 9px;
+      margin: 0px 0 0 -4.5px;
+      background: transparent url(../img/down.png) 0 0 no-repeat;
+      -webkit-animation: ani-mouse 1.5s linear infinite;
+      -moz-animation: ani-mouse 1.5s linear infinite;
+      animation: ani-mouse 1.5s linear infinite;
+    }
+  }
+}
+
+@keyframes ani-mouse {
+  0% {
+    opacity: 1;
+    top: 39%;
+  }
+  15% {
+    opacity: 1;
+    top: 60%;
+  }
+  50% {
+    opacity: 0;
+    top: 60%;
+  }
+  100% {
+    opacity: 0;
+    top: 39%;
+  }
 }
