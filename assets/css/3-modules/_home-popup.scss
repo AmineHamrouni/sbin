@@ -1,7 +1,6 @@
 $send-bg-color: #11943f;
-$login-bg-color: rgba(37,213,99,.95);
-
-
+$login-bg-color: rgba(37, 213, 99, .95);
+$menu-bg-color: #33435a;
 .main-menu {
   display: none;
   @include outer-container(100%);
@@ -11,7 +10,7 @@ $login-bg-color: rgba(37,213,99,.95);
   right: 0;
   bottom: 0;
   min-height: 600px;
-  background: rgba(37,213,99,.95);
+  background: rgba(37, 213, 99, .95);
   z-index: 9999;
   transition: .2s ease-in-out;
   .wrapper {
@@ -23,7 +22,8 @@ $login-bg-color: rgba(37,213,99,.95);
   }
 }
 
-.login-pop {
+.login-pop,
+.menu-pop {
   display: none;
   @include outer-container(100%);
   position: fixed;
@@ -32,7 +32,7 @@ $login-bg-color: rgba(37,213,99,.95);
   right: 0;
   bottom: 0;
   min-height: 600px;
-  background: rgba(37,213,99,.95);
+  background: rgba(37, 213, 99, .95);
   z-index: 9999;
   transition: .2s ease-in-out;
   .wrapper {
@@ -46,7 +46,7 @@ $login-bg-color: rgba(37,213,99,.95);
 }
 
 .is-opened {
-  display: block ;
+  display: block;
 }
 
 .login-pop__title {
@@ -55,7 +55,7 @@ $login-bg-color: rgba(37,213,99,.95);
   margin-bottom: 60px;
 }
 
-.login-pop__description{
+.login-pop__description {
   position: relative;
   @include span-columns(6 of 12);
   text-align: right;
@@ -74,7 +74,7 @@ $login-bg-color: rgba(37,213,99,.95);
     top: 0;
     height: 100%;
     width: 1px;
-    background-color: rgba(255,255,255,.6);
+    background-color: rgba(255, 255, 255, .6);
   }
 }
 
@@ -91,7 +91,7 @@ $login-bg-color: rgba(37,213,99,.95);
   font-size: 18px;
 }
 
-.login-pop__form{
+.login-pop__form {
   @include span-columns(6 of 12);
   text-align: center;
   form {
@@ -132,7 +132,7 @@ $login-bg-color: rgba(37,213,99,.95);
   margin-top: 20px;
   background-color: $send-bg-color;
   &:hover {
-    background-color: darken($send-bg-color,10%);
+    background-color: darken($send-bg-color, 10%);
   }
 }
 
@@ -141,11 +141,58 @@ $login-bg-color: rgba(37,213,99,.95);
   width: 80%;
   max-width: 510px;
   height: 1px;
-  background-color: rgba(255,255,255,.3);
+  background-color: rgba(255, 255, 255, .3);
 }
 
 .text-center {
   text-align: center;
 }
 
+.menu-pop {
+  background-color: transparentize($menu-bg-color, 0.1);
+  display: block;
+  ;
+}
 
+.menu-pop__container {
+  color: #ccc;
+  width: 100%;
+  @include direction-context(right-to-left) {
+    .menu-pop__list,
+    .menu-pop__contact {
+      @include span-columns(6 of 12);
+    }
+  }
+  .menu-pop__list {
+    border-left: 1px solid transparentize(#fff, 0.1);
+    ul li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 62px;
+      margin-bottom: 25px;
+      text-align: center;
+      color: #fff;
+      font-size: 30px;
+      transition: .2s ease-in-out;
+      a {
+        color: #fff;
+      }
+      &:hover {
+        background-color: #25d563;
+      }
+    }
+  }
+  .menu-pop__contact {
+    h4 {
+      color: #fff;
+      font-size: 24px;
+      font-weight: normal;
+    }
+  }
+  .menu-pop__contact__newletter {
+    max-width: 400px;
+    width: 100%;
+  }
+}

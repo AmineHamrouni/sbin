@@ -7,6 +7,15 @@ $(document).ready(function () {
   $(".top-menu__login").click(function () {
     $('.login-pop').fadeIn(300);
   });
+  // Close button
+  $(".menu-pop__close").click(function () {
+    $('.menu-pop').fadeOut(300);
+  });
+  // open button
+  $(".top-menu__main").click(function () {
+    $('.menu-pop').fadeIn(300);
+  });
+  
   //On scroll change header background
   $(window).scroll(function () {
     //var firstSection = $(".section-about");

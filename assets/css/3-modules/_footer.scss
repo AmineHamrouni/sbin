@@ -7,25 +7,17 @@
   $footer-color: #ccc;
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
-
   background: $footer-background;
-  
   padding: ($base-spacing * 2) $gutter;
   width: 100%;
-  
-  .footer__title {
-     
-  }
-
+  .footer__title {}
   .footer-logo {
     margin-bottom: 2em;
     text-align: center;
-    
     img {
       //height: 3em;
     }
   }
-
   .footer__content {
     margin-top: 100px;
     display: flex;
@@ -43,24 +35,19 @@
       padding: 0;
     }
   }
-
   li {
     line-height: 1.5em;
     list-style: none;
     text-align: right;
-    
   }
-
   li a {
     color: $footer-link-color;
     text-decoration: none;
-
     &:focus,
     &:hover {
       color: transparentize($footer-color, 0);
     }
   }
-
   li h3 {
     color: $footer-color;
     font-size: 18px;
@@ -74,7 +61,7 @@
       right: 0;
       height: 1px;
       width: 100%;
-      background-color: transparentize(#fff,.7); 
+      background-color: transparentize(#fff, .7);
     }
   }
   .footer__contact {
@@ -84,40 +71,6 @@
     }
     .footer__contact__number {
       direction: ltr;
-    }
-    .footer__contact__newletter {
-      position: relative;
-      label {
-        position: absolute;
-        right: 16px;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-      input {
-        background-color: transparentize(#fff,.7);
-        height: 40px;
-        padding-right: 16px;
-        @include placeholder {
-          color: #ccc;
-        }
-      }
-      button {
-        height: 32px;
-        padding: 0 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        left: 5px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #fff;
-        background-color: #55c6ff;
-        border: 2px solid #fff;
-        &:hover {
-          background-color: darken(#55c6ff, 20%);
-        }
-      }
     }
   }
   .footer__tweet {
@@ -138,7 +91,6 @@
       color: #38bbff;
     }
   }
-  
   .footer__keywords {
     span {
       display: inline-block;
@@ -146,7 +98,7 @@
       color: #ccc;
       padding: 5px 15px;
       margin-bottom: 5px;
-      background-color: transparentize(#fff,.9);
+      background-color: transparentize(#fff, .9);
       cursor: help;
       transition: .2s ease;
       &:hover {
@@ -155,7 +107,6 @@
       }
     }
   }
-  
   .footer__social {
     position: relative;
     padding-top: 10px;
@@ -169,7 +120,7 @@
       right: 0;
       height: 1px;
       width: 100%;
-      background-color: transparentize(#fff,.7);
+      background-color: transparentize(#fff, .7);
     }
     span {
       color: #ccc;
@@ -184,13 +135,11 @@
       height: 22px;
     }
   }
-
   hr {
     border: 1px solid transparentize($footer-disclaimer-color, 0.3);
     margin: 0 auto $base-spacing;
     width: 12em;
   }
-
   p {
     color: $footer-disclaimer-color;
     font-size: 0.9em;
@@ -198,5 +147,47 @@
     margin: auto;
     max-width: 35em;
     text-align: center;
+  }
+}
+
+.footer__contact__newletter,
+.menu-pop__contact__newletter {
+  position: relative;
+  label {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  input {
+    background-color: transparentize(#fff, .7);
+    height: 40px;
+    padding-right: 16px;
+    @include placeholder {
+      color: #ccc;
+    }
+  }
+  button {
+    height: 32px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    background-color: #55c6ff;
+    border: 2px solid #fff;
+    transition: .3s ease;
+    &:hover {
+      background-color: darken(#55c6ff, 20%);
+    }
+  }
+  &:hover {
+    button {
+      padding: 0 25px;
+    }
   }
 }
