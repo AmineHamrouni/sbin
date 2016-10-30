@@ -271,6 +271,41 @@
     .section-library__gallery {
       @include span-columns(8 of 16);
     }
+    .section-library__items {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @include direction-context(right-to-left) {
+      .section-library__item {
+        @include span-columns(3 of 6);
+        @include omega(2n);
+        background-color: black;
+        height: 170px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        figure {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+        }
+        img {
+        }
+        h4 {
+          color: #fff;
+          font-size: 12px;
+          padding: 5px;
+          position: absolute;
+          z-index: 2;
+          bottom: 0px;
+          left: 0;
+          right: 0;
+          text-align: center;
+          background-color: transparentize(#000, 0.5);
+        }
+      }
+    }
   }
   .section-sponsor {
     background-image: url(../img/riyadh-2.png);
